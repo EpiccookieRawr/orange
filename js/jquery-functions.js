@@ -5,8 +5,10 @@ jQuery( document ).ready(function() {
   });
 
   jQuery('.footer-submenu label').after().click(function () {
+    if(jQuery( window ).width() <= 780 ){
       var id = jQuery(this).attr('for');
       jQuery( "#"+id ).slideToggle("slow");
       jQuery(this).toggleClass('plus-icon-transform');
+    }
   });
 });
